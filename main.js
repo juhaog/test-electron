@@ -18,6 +18,7 @@ const createWindow = () => {
 }
 
 app.whenReady().then(() => {
+  require('update-electron-app')()
   ipcMain.handle('ping', () => 'pong')
   createWindow()
 
